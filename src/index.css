@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 10rem;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .container {
+    width: 95%;
+    max-width: 120rem;
+    width: min(95%, 120rem);
+    margin: 0 auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .moviecard {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 10px rgb(210, 208, 208);
+  }
+
+  .moviecard h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .moviecard-image {
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .moviecard:hover .moviecard-image img {
+    transform: scale(1.05);
+  }
+
+  .btn-seemore {
+    border: none;
+    display: block;
+    font-size: 2rem;
+    background-color: inherit;
+    margin: 5rem auto;
+    width: fit-content;
+    color: gray;
+    cursor: pointer;
+  }
+  .btn-seemore:hover {
+    color: #000;
+    transition: color 0.2s linear;
+  }
+  @media (min-width: 768px) {
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .moviecard {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .moviecard-descriptions {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.5rem;
+      text-align: center;
+      z-index: 10;
+      bottom: -100%;
+      left: 0;
+      transition: all 0.1s linear;
+    }
+
+    .moviecard:hover .moviecard-descriptions {
+      bottom: 0;
+      opacity: 1;
+    }
+
+  }
+  
+  @media (min-width: 992px) {
+    .content {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
