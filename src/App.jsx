@@ -1,8 +1,8 @@
-import Container from "./components/Container"
+import Container from "./components/Container.jsx"
 import Provider from "./Context.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Layout from "./components/Layout"
-import Movie from "./components/Movie"
+import Layout from "./components/Layout.jsx"
+import Movie from "./components/Movie.jsx"
 function App () { // Un componente es una funcion sincronica que retorna un elemento HTML
   // SPA single page application
 
